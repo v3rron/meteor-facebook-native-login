@@ -1,5 +1,4 @@
 import { _ } from "underscore"
-import  facebookConnectPlugin from "./facebookConnectPlugin"
 /*
 * Log the user using the native facebook sdk, if not under Cordova, it will called Meteor.loginWithFacebook
 * */
@@ -15,7 +14,7 @@ export default (options, callback)=>{
     options = null;
   }
 
-  facebookConnectPlugin.login(options.requestPermissions || [], (res)=>{
+  global.facebookConnectPlugin.login(options.requestPermissions || [], (res)=>{
     let opts = _.extend(_.pick(res.authResponse, ['accessToken', 'expiresIn', 'userID']), {
       methodName: "native-facebook"
     });
