@@ -1,5 +1,5 @@
 Package.describe({
-  name: 'v3rron:facebook-native-login',
+  name: 'verron:facebook-native-login',
   version: '0.1.2',
   // Brief, one-line summary of the package.
   summary: 'Use native api to login with Facebook',
@@ -38,7 +38,7 @@ Package.onTest(function(api) {
 
   api.use("ecmascript");
   api.use("http");
-  api.use("v3rron:facebook-native-login");
+  api.use("verron:facebook-native-login");
   api.use("practicalmeteor:mocha@2.4.5_2");
 
   api.addFiles("tests/client.js", "client");
